@@ -6,4 +6,11 @@ class StudentsController < ApplicationController
         # byebug
     end
 
+    def grades
+        # byebug
+        students = Student.order("grade DESC")
+        # student_grades = Grade.all
+        render json: students
+    end
+
 end
